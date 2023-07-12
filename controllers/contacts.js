@@ -179,4 +179,5 @@ self.deleteAll = async (req, res) => {
         })
     }
 };
+
 module.exports = self;

@@ -1,3 +1,4 @@
+-- Active: 1688541104794@@127.0.0.1@3306@dbtesting
 # Development
 ## Setting Up
 ### Install Dependencies
@@ -42,6 +43,13 @@ sequelize db:migrate
 ```Run the project
 npm run dev or node server.js 
 ````
+
+### Use JWT
+```
+Authorization Bearer Token: token
+```
+
+
 
 ### Documentation of sequelize
 
