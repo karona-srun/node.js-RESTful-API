@@ -77,6 +77,8 @@ self.createUsers = async (req, res) => {
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             email: req.body.email,
+            userName: req.body.userName,
+            password: req.body.password,
         };
         let data = await Users.create(newUsers);
         return res.status(201).json({

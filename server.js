@@ -17,10 +17,8 @@ app.get("/", (req, res) => {
     res.json({ message: "Welcome to node api application." });
 });
 
-// const routes = require("./routes/index");
-// app.use(routes);
-const appRoutes = require('./routes')
-appRoutes(app)
+const routes = require('./routes');
+routes(app);
 
 app.listen(PORT, function () {
     console.log(`Server is running on port ${PORT}.`);
