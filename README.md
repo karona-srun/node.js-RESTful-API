@@ -1,10 +1,59 @@
+# Development
+## Setting Up
+### Install Dependencies
+```shell script
+composer install
+```
 
+### Configration Database 
+- Configration database in config/config.json
+``` Configration database in config/config.json
+{
+  "development": {
+    "username": "root",
+    "password": "ROOT@123",
+    "database": "dbtesting",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
+```
+
+### Generates a table from migration file
+```Generates a table from migration file
+sequelize db:migrate   
+```
+
+### Run the project
+```Run the project
+npm run dev or node server.js 
 ````
-CMD use Sequelize
+
+### Documentation of sequelize
+
+```Generates a model and its migration
 sequelize model:create --name modelUser --attributes name:string --underscored  
+```
 
-sequelize <command>
+```Generates a table from migration file
+sequelize db:migrate   
+```
 
+```Sequelize <command>
 Commands:
   - sequelize db:migrate                        Run pending migrations
   - sequelize db:migrate:schema:timestamps:add  Update migration table to have timestamps
@@ -27,3 +76,8 @@ Commands:
   - sequelize seed:generate                     Generates a new seed file           [aliases: seed:create]
 
 ````
+### Search Route API
+```Search route
+http://localhost:8080/api/users/?q=email
+```
+
